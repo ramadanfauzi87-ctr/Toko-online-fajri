@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokofajri.id - Toko Online</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Tokofajri<span>.id</span>
+    </div>
+
+    <nav class="nav-menu">
+
+        <a href="#">Home</a>
+
+        <a href="#produk">Produk</a>
+
+        <a href="#">Kategori</a>
+
+        <a href="#">Promo</a>
+
+        <a href="#">Kontak</a>
+
+    </nav>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari produk...">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Diskon Hingga 50%
+        </h1>
+
+        <p>
+
+            Belanja lebih hemat dengan produk berkualitas premium.
+
+        </p>
+
+        <button class="hero-btn">
+
+            Belanja Sekarang
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= KATEGORI ================= -->
+
+<section class="kategori">
+
+    <div class="kategori-item">
+
+        <i class="fa-solid fa-shirt"></i>
+
+        <span>Kaos</span>
+
+    </div>
+
+    <div class="kategori-item">
+
+        <i class="fa-solid fa-person"></i>
+
+        <span>Celana</span>
+
+    </div>
+
+    <div class="kategori-item">
+
+        <i class="fa-solid fa-shoe-prints"></i>
+
+        <span>Sepatu</span>
+
+    </div>
+
+    <div class="kategori-item">
+
+        <i class="fa-solid fa-hat-cowboy"></i>
+
+        <span>Aksesoris</span>
+
+    </div>
+
+</section>
+
+<!-- ================= PRODUK ================= -->
+
+<section id="produk">
+
+<h2 class="judul">
+
+Produk Terbaru
+
+</h2>
+
+<div class="container-produk">
+
+<!-- Produk 1 -->
+
+<div class="card-produk">
+
+<div class="badge">
+
+Terlaris
+
+</div>
+
+<img src="ara.jpg" alt="Produk">
+
+<h3>
+
+Kaos Premium
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 4.9
+
+</div>
+
+<p class="harga">
+
+Rp85.000
+
+</p>
+
+<p class="deskripsi">
+
+Bahan Cotton Combed 30s Premium.
+
+</p>
+
+<button onclick="beliProduk('Kaos Premium','85000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+<!-- Produk 2 -->
+
+<div class="card-produk">
+
+<div class="badge promo">
+
+Promo
+
+</div>
+
+<img src="foto.png" alt="Produk">
+
+<h3>
+
+Sepatu Casual
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 5.0
+
+</div>
+
+<p class="harga">
+
+Rp250.000
+
+</p>
+
+<p class="deskripsi">
+
+Sepatu nyaman dipakai setiap hari.
+
+</p>
+
+<button onclick="beliProduk('Sepatu Casual','250000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+<!-- Produk 3 -->
+
+<div class="card-produk">
+
+<img src="img/produk3.jpg">
+
+<h3>
+
+Celana Cargo
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 4.8
+
+</div>
+
+<p class="harga">
+
+Rp180.000
+
+</p>
+
+<p class="deskripsi">
+
+Cargo premium kualitas distro.
+
+</p>
+
+<button onclick="beliProduk('Celana Cargo','180000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+<!-- Produk 4 -->
+
+<div class="card-produk">
+
+<div class="badge promo">
+
+Promo
+
+</div>
+
+<img src="img/produk4.jpg">
+
+<h3>
+
+Jaket Hoodie
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 5.0
+
+</div>
+
+<p class="harga">
+
+Rp220.000
+
+</p>
+
+<p class="deskripsi">
+
+Hoodie fleece premium.
+
+</p>
+
+<button onclick="beliProduk('Jaket Hoodie','220000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+<!-- Produk 5 -->
+
+<div class="card-produk">
+
+<img src="img/produk5.jpg">
+
+<h3>
+
+Topi Fashion
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 4.7
+
+</div>
+
+<p class="harga">
+
+Rp65.000
+
+</p>
+
+<p class="deskripsi">
+
+Topi kekinian.
+
+</p>
+
+<button onclick="beliProduk('Topi Fashion','65000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+<!-- Produk 6 -->
+
+<div class="card-produk">
+
+<img src="img/produk6.jpg">
+
+<h3>
+
+Tas Pria
+
+</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐ 4.9
+
+</div>
+
+<p class="harga">
+
+Rp175.000
+
+</p>
+
+<p class="deskripsi">
+
+Tas premium anti air.
+
+</p>
+
+<button onclick="beliProduk('Tas Pria','175000')">
+
+<i class="fab fa-whatsapp"></i>
+
+Beli Sekarang
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= KEUNGGULAN ================= -->
+
+<section class="fitur">
+
+<div class="fitur-item">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Gratis Ongkir</h3>
+
+<p>Minimal belanja Rp100.000</p>
+
+</div>
+
+<div class="fitur-item">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h3>Pembayaran Mudah</h3>
+
+<p>Transfer & QRIS</p>
+
+</div>
+
+<div class="fitur-item">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>Support 24 Jam</h3>
+
+<p>Siap membantu Anda.</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Tokofajri.id</h3>
+            <p>Toko online fashion terpercaya dengan kualitas terbaik.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Menu</h3>
+            <a href="#">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#">Promo</a>
+            <a href="#">Kontak</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Kontak</h3>
+            <p>📱 08xxxxxxxxxx</p>
+            <p>📧 email@gmail.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Ikuti Kami</h3>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Tokofajri.id - All Rights Reserved
+    </div>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
