@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "nama": "Produk Unggulan",
+        "kategori": "kaos",
+        "harga": 100000,
+        "hargaLama": 125000,
+        "rating": 4.9,
+        "terjual": 120,
+        "gambar": [
+            "foto.png",
+            "foto-2.png",
+            "foto-3.png"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Produk dengan bahan kualitas premium yang sangat diminati."
+    },
+
+    {
+        "id": 2,
+        "nama": "Sepatu Casual",
+        "kategori": "sepatu",
+        "harga": 250000,
+        "hargaLama": 300000,
+        "rating": 4.7,
+        "terjual": 85,
+        "gambar": [
+            "ara.jpg",
+            "ara-2.jpg",
+            "ara-3.jpg"
+        ],
+        "badge": "Promo",
+        "deskripsi": "Desain modern dan nyaman digunakan untuk kegiatan harian."
+    },
+
+    {
+        "id": 3,
+        "nama": "Kaos Spongebob",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 100000,
+        "rating": 5,
+        "terjual": 150,
+        "gambar": [
+            "ara.jpg",
+            "img/baju-belakang.jpg",
+            "img/baju-samping.jpg",
+            "img/baju-detail.jpg"
+        ],
+        "badge": "Promo",
+        "deskripsi": "Bahan 100% Cotton Combed, adem dan halus di kulit."
+    },
+
+    {
+        "id": 4,
+        "nama": "Kaos Bola Premium",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 120000,
+        "rating": 4.9,
+        "terjual": 710,
+        "gambar": [
+            "ara.jpg",
+            "img/kaos-polos-2.jpg",
+            "img/kaos-polos-3.jpg"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Kaos Bola premium dengan bahan Cotton Combed yang adem dan nyaman."
+    },
+        {
+        "id": 5,
+        "nama": "Kaos Spaiderman Premium",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 120000,
+        "rating": 4.9,
+        "terjual": 710,
+        "gambar": [
+            "ara.jpg",
+            "img/kaos-polos-2.jpg",
+            "img/kaos-polos-3.jpg"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Kaos Bola premium dengan bahan Cotton Combed yang adem dan nyaman."
+    },
+        {
+        "id": 6,
+        "nama": "Kaos Super Premium",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 120000,
+        "rating": 4.9,
+        "terjual": 710,
+        "gambar": [
+            "ara.jpg",
+            "img/kaos-polos-2.jpg",
+            "img/kaos-polos-3.jpg"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Kaos Bola premium dengan bahan Cotton Combed yang adem dan nyaman."
+    },
+        {
+        "id": 7,
+        "nama": "Kaos langka Premium",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 120000,
+        "rating": 4.9,
+        "terjual": 710,
+        "gambar": [
+            "ara.jpg",
+            "img/kaos-polos-2.jpg",
+            "img/kaos-polos-3.jpg"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Kaos Bola premium dengan bahan Cotton Combed yang adem dan nyaman."
+    },
+        {
+        "id": 8,
+        "nama": "Kaos basket Premium",
+        "kategori": "kaos",
+        "harga": 85000,
+        "hargaLama": 120000,
+        "rating": 4.9,
+        "terjual": 710,
+        "gambar": [
+            "ara.jpg",
+            "img/kaos-polos-2.jpg",
+            "img/kaos-polos-3.jpg"
+        ],
+        "badge": "Terlaris",
+        "deskripsi": "Kaos Bola premium dengan bahan Cotton Combed yang adem dan nyaman."
+    }
+]

@@ -1,0 +1,1050 @@
+/* =========================================================
+   1. RESET & BASE STYLES
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fb;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   2. NAVBAR & HEADER
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 5%;
+  gap: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  flex-shrink: 0;
+  font-size: 27px;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #00b14f;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-menu a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #00b14f;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #00b14f;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.search-box {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 260px;
+  padding: 11px 45px 11px 17px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #00b14f;
+  box-shadow: 0 0 0 3px rgba(0, 177, 79, 0.12);
+}
+
+.search-box i {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   3. HERO SECTION
+========================================================= */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 260px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 750px;
+}
+
+.hero h1 {
+  margin-bottom: 14px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-btn {
+  padding: 13px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: #00b14f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #009245;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   4. SECTION TITLE
+========================================================= */
+
+.section-title {
+  padding: 35px 20px 15px;
+  text-align: center;
+}
+
+.section-title h2 {
+  margin-bottom: 7px;
+  font-size: 30px;
+  color: #222;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* =========================================================
+   5. KATEGORI
+========================================================= */
+
+.kategori {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.kategori-item {
+  padding: 22px 15px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.kategori-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.kategori-item.active {
+  background-color: #00b14f;
+  color: #fff;
+}
+
+.kategori-item i {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 35px;
+  color: #00b14f;
+}
+
+.kategori-item.active i {
+  color: #fff;
+}
+
+.kategori-item span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   6. PRODUK CONTAINER & CARD
+========================================================= */
+
+.container-produk {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card-produk {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: fadeUp 0.45s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produk:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* Gambar Produk & Fallback */
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f1f1f1;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.product-image img,
+.card-produk > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.35s ease;
+}
+
+.product-image:hover img,
+.card-produk > img:hover {
+  transform: scale(1.05);
+}
+
+.gambar-tidak-tersedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f3f4f6;
+  color: #999;
+}
+
+.gambar-tidak-tersedia i {
+  margin-bottom: 8px;
+  font-size: 35px;
+}
+
+/* Thumbnail Produk */
+.product-thumbnails {
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px;
+  overflow-x: auto;
+}
+
+.product-thumbnail {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 7px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-thumbnail.active {
+  border-color: #00b14f;
+}
+
+/* Detail Komponen Produk */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: #ff3b30;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge.promo {
+  background-color: #ff9800;
+}
+
+.card-produk h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  padding: 13px 14px 5px;
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #222;
+}
+
+.rating {
+  margin-top: 4px;
+  padding: 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ff9800;
+}
+
+.rating small {
+  margin-left: 4px;
+  font-size: 11px;
+  color: #888;
+}
+
+.harga {
+  margin: 0;
+  padding: 7px 14px 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #00a651;
+}
+
+.harga-lama {
+  margin: 0;
+  padding: 2px 14px 0;
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.deskripsi {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  flex: 1;
+  margin: 0;
+  padding: 8px 14px;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.card-produk button {
+  width: calc(100% - 28px);
+  margin: 8px 14px 14px;
+  padding: 11px;
+  border: none;
+  border-radius: 9px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-produk button:hover {
+  background-color: #128c7e;
+  transform: translateY(-1px);
+}
+
+.card-produk button i {
+  margin-right: 6px;
+}
+
+/* Empty State / Error */
+.produk-kosong,
+.produk-error {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  color: #666;
+}
+
+.produk-kosong i,
+.produk-error i {
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.produk-kosong h3,
+.produk-error h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+/* =========================================================
+   7. FITUR SECTION
+========================================================= */
+
+.fitur {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.fitur-item {
+  padding: 28px 20px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fitur-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.13);
+}
+
+.fitur-item i {
+  margin-bottom: 14px;
+  font-size: 40px;
+  color: #00b14f;
+}
+
+.fitur-item h3 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.fitur-item p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+}
+
+
+/* =========================================================
+   8. FOOTER
+========================================================= */
+
+footer {
+  margin-top: 60px;
+  padding: 50px 20px 25px;
+  background-color: #111827;
+  color: #fff;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-box h3 {
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-box p,
+.footer-box a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.footer-box a:hover {
+  color: #00b14f;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #1f2937;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #00b14f;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 35px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+
+/* =========================================================
+   9. LIGHTBOX / MODAL
+========================================================= */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+
+.image-modal.show {
+  display: flex;
+}
+
+.image-modal img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  cursor: default;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.image-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-modal-prev,
+.image-modal-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.image-modal-prev:hover,
+.image-modal-next:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.image-modal-prev {
+  left: 25px;
+}
+
+.image-modal-next {
+  right: 25px;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 13px;
+  transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   10. KEYFRAMES
+========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   11. MEDIA QUERIES (RESPONSIVE DESIGN)
+========================================================= */
+
+/* Desktop Kecil / Laptop (<= 1200px) */
+@media (max-width: 1200px) {
+  .navbar {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .search-box input {
+    width: 220px;
+  }
+
+  .container-produk {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Tablet (<= 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .kategori {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .container-produk {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .fitur {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Smartphone Large (<= 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2px 5px 6px;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-menu a {
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 11px 42px 11px 15px;
+  }
+
+  .hero {
+    min-height: 250px;
+    padding: 35px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+
+  .section-title {
+    padding: 28px 15px 12px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title p {
+    font-size: 12px;
+  }
+
+  .kategori {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  .kategori-item {
+    padding: 18px 10px;
+  }
+
+  .kategori-item i {
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+
+  .kategori-item span {
+    font-size: 13px;
+  }
+
+  .container-produk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card-produk {
+    border-radius: 12px;
+  }
+
+  .card-produk h3 {
+    padding: 10px 10px 3px;
+    font-size: 14px;
+  }
+
+  .rating {
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .rating small {
+    font-size: 9px;
+  }
+
+  .harga {
+    padding: 5px 10px 0;
+    font-size: 17px;
+  }
+
+  .harga-lama {
+    padding: 2px 10px 0;
+    font-size: 10px;
+  }
+
+  .deskripsi {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .card-produk button {
+    width: calc(100% - 20px);
+    margin: 6px 10px 10px;
+    padding: 9px 5px;
+    font-size: 11px;
+  }
+
+  .badge {
+    top: 7px;
+    left: 7px;
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .fitur {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+    font-size: 11px;
+  }
+
+  .image-modal {
+    padding: 15px;
+  }
+
+  .image-modal img {
+    max-width: 95vw;
+    max-height: 85vh;
+    border-radius: 8px;
+  }
+
+  .image-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Smartphone Medium (<= 600px) */
+@media (max-width: 600px) {
+  .product-thumbnail {
+    width: 42px;
+    height: 42px;
+  }
+
+  .image-modal-prev,
+  .image-modal-next {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .image-modal-prev {
+    left: 10px;
+  }
+
+  .image-modal-next {
+    right: 10px;
+  }
+}
+
+/* Smartphone Small (<= 420px) */
+@media (max-width: 420px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-menu {
+    gap: 14px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+  }
+
+  .container-produk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .card-produk h3 {
+    font-size: 13px;
+  }
+
+  .rating {
+    font-size: 10px;
+  }
+
+  .harga {
+    font-size: 15px;
+  }
+
+  .deskripsi {
+    font-size: 10px;
+  }
+
+  .card-produk button {
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+
+  .badge {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+}

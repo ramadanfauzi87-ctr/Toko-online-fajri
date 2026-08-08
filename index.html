@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokofajri.id - Toko Online</title>
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================
+         GOOGLE FONT
+    ========================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+    <header class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            Tokofajri<span>.id</span>
+        </div>
+
+        <!-- MENU -->
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#kategori">Kategori</a>
+            <a href="#promo">Promo</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari produk..." autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+    <section class="hero" id="promo">
+        <div class="hero-text">
+            <h1>Diskon Hingga 50%</h1>
+            <p>Belanja lebih hemat dengan produk berkualitas premium.</p>
+            <button class="hero-btn">Belanja Sekarang</button>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         KATEGORI
+    ===================================================== -->
+    <section class="kategori-section" id="kategori">
+        <div class="section-title">
+            <h2>Pilih Kategori</h2>
+            <p>Temukan produk favoritmu</p>
+        </div>
+
+        <div class="kategori">
+            <!-- SEMUA -->
+            <div class="kategori-item" data-kategori="semua">
+                <i class="fa-solid fa-border-all"></i>
+                <span>Semua</span>
+            </div>
+
+            <!-- KAOS -->
+            <div class="kategori-item" data-kategori="kaos">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Kaos</span>
+            </div>
+
+            <!-- CELANA -->
+            <div class="kategori-item" data-kategori="celana">
+                <i class="fa-solid fa-person"></i>
+                <span>Celana</span>
+            </div>
+
+            <!-- SEPATU -->
+            <div class="kategori-item" data-kategori="sepatu">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>Sepatu</span>
+            </div>
+
+            <!-- AKSESORIS -->
+            <div class="kategori-item" data-kategori="aksesoris">
+                <i class="fa-solid fa-hat-cowboy"></i>
+                <span>Aksesoris</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         PRODUK
+    ===================================================== -->
+    <section class="produk-section" id="produk">
+        <div class="section-title">
+            <h2>Produk Terbaru</h2>
+            <p>Pilih produk favoritmu dan beli langsung via WhatsApp</p>
+        </div>
+
+        <!-- PRODUK AKAN DIBUAT OTOMATIS OLEH script.js -->
+        <div class="container-produk" id="productContainer"></div>
+    </section>
+
+
+    <!-- =====================================================
+         LIGHTBOX / GAMBAR BESAR (SLIDER)
+    ===================================================== -->
+    <div class="image-modal" id="imageModal">
+        <!-- TOMBOL CLOSE -->
+        <button class="image-modal-close" id="imageModalClose" type="button" aria-label="Tutup gambar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- TOMBOL PREVIOUS -->
+        <button class="image-modal-prev" type="button" aria-label="Gambar sebelumnya">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- GAMBAR UTAMA -->
+        <img id="modalImage" src="" alt="Gambar produk">
+
+        <!-- TOMBOL NEXT -->
+        <button class="image-modal-next" type="button" aria-label="Gambar berikutnya">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- COUNTER GAMBAR -->
+        <div class="image-counter"> 1</div>
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+    <footer id="kontak">
+        <div class="footer-container">
+            <!-- TENTANG TOKO -->
+            <div class="footer-box">
+                <h3>Tokofajri.id</h3>
+                <p>Toko online fashion terpercaya dengan kualitas terbaik.</p>
+            </div>
+
+            <!-- MENU -->
+            <div class="footer-box">
+                <h3>Menu</h3>
+                <a href="#">Home</a>
+                <a href="#produk">Produk</a>
+                <a href="#promo">Promo</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+
+            <!-- KONTAK -->
+            <div class="footer-box">
+                <h3>Kontak</h3>
+                <p>📱 08xxxxxxxxxx</p>
+                <p>📧 email@gmail.com</p>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-box">
+                <h3>Ikuti Kami</h3>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            © 2026 Tokofajri.id - All Rights Reserved
+        </div>
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
